@@ -1,0 +1,117 @@
+.flex {
+    display: flex;
+}
+  
+.items-center {
+  align-items: center;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+@media (max-width: 700px) {
+  .container {
+    max-width: 43rem;
+    margin: 0 1rem;
+  }
+
+  .navbar {
+    padding: 10px;
+    height: 80px;
+    margin-bottom: 0px;
+  }
+
+  .navbar div {
+    height: 60px;
+  }
+
+  .navbar p {
+    height: 30px;
+    margin-bottom: 10px;
+  }
+
+  .navbar .btn-primary {
+    width: 100%;
+    margin-left: 0px;
+  }
+
+  .navbar .container {
+    flex-direction: column;
+    margin: 0px;
+  }
+
+  .header-media {
+    flex-direction: column;
+  }
+
+  main header h1{
+    margin: 28px 0px;
+  }
+
+  .btn-todos {
+    margin-left: 0px;
+  }
+
+  .input-none {
+    padding: 1rem 1rem;
+  }
+
+  .modal {
+    left: 5%;
+    right: 5%;
+    top: 5%;
+    bottom: 5%;
+  }
+
+  .modal-type {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .modal .btn-outline {
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 12px;
+  }
+
+  .modal-footer {
+    justify-content: space-around;
+  }
+
+  .modal-footer button {
+    width: 100%;
+  }
+
+  .modal-footer .btn-greylow {
+    margin-left: 0px;
+  }
+}

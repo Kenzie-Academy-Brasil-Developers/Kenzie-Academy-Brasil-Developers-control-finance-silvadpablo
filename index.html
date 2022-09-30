@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Finance</title>
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Control Finance - Seu controle financeiro">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/buttons.css">
+    <link rel="stylesheet" href="./styles/modal.css">
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/texts.css">
+    <link rel="stylesheet" href="./styles/inputs.css">
+    <link rel="stylesheet" href="./pages/home/index.css">
+    <link rel="stylesheet" href="./styles/globalStyles.css">
+    <link rel="stylesheet" href="./styles/displays.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container flex justify-between">
+            <section class="flex items-center">
+                <p class="flex items-center title-1"><span class="navSpan">Control</span>Finance</p>   
+            </section>
+            <section class="flex items-center">
+                <button id="buttonRegister" class="btn btn-primary">Registrar novo valor</button>
+            </section>
+        </div>
+    </nav>
+
+
+    <main class="container">
+        <header class="flex justify-between header-media">
+            <section>
+                <h1 class="title-1">Resumo Fianceiro</h1>
+            </section>
+            <section>
+                <button class="btn btn-outline btn-filter">Todos</button>
+                <button class="btn btn-outline btn-filter">Entradas</button>
+                <button class="btn btn-outline btn-filter">Saídas</button>
+            </section>
+        </header>
+
+        <div class="input-soma input-show flex justify-between">
+            <section>
+                <h2 class="text-1-medium">Soma dos valores</h2>
+            </section>
+            <section>
+                <p id="entries-sum" class="text-1-medium">0,00</p>
+            </section>
+        </div>
+
+        <!-- <div class="input-none flex flex-col items-center">
+            <h2 class="input-none-title text-1-bold">Nenhum valor cadastrado</h2>
+            <p class="input-none-text">Registrar novo valor</p>
+        </div> -->
+
+        <!-- <section class="flex justify-between items-center input-values">
+            <div>
+                <p>valor</p>
+            </div>
+            <div class="flex justify-between items-center">
+                <p class="flex items-center btn btn-greylow btn-value">Entrada</p>
+                <button class="btn icon"></button>
+            </div>
+        </section> -->
+
+
+    </main>
+
+
+    <!-- <section class="modal-wrap">
+        <div class="modal flex flex-col justify-between">
+            <header class="flex justify-between items-center">
+                <h2 class="title-2-bold">Registro de Valor</h2>
+                <button id="close-button" class="btn btn-greylow">X</button>
+            </header>
+            <p class="text-1">Digite o valor e em seguida aperte no botão referente ao tipo do valor</p>
+            <div class="flex flex-col">
+                <label for="valueModal">Valor</label>
+                <div class="currency title-2-medium">
+                    <input class="text-1 input" type="number" id="valueInput" name="valueModal" placeholder="00,00">
+                </div>
+            </div>
+            <div class="flex items-center modal-type">
+                <p class="title-1-medium">Tipo de valor</p>
+                <button class="btn btn-outline">Entrada</button>
+                <button class="btn btn-outline">Saída</button>
+            </div>
+            <div class="flex justify-end modal-footer">
+                <button class="btn btn-greylow">Cancelar</button>
+                <button class="btn btn-primary">Inserir Valor</button>
+            </div>
+        </div>
+    </section> -->
+
+
+    <script src="./pages/home/valuesData.js"></script>
+    <script src="./pages/home/index.js"></script>
+    <script src="./scripts/modal.js"></script>
+</body>
+</html>

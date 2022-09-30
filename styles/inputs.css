@@ -1,0 +1,86 @@
+.input {
+    font-size: var(--font-text-1);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--font-line-height-1);
+    border: var(--button-border) var(--color-grey-3);
+    background: var(--color-mode);
+    border-radius: var(--radius-2);
+    padding: var(--padding-input-values);
+    width: 85%;
+    outline: none;
+}
+
+/* .input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+} */
+
+.input::placeholder {
+    color: var(--color-grey-2);
+    font-weight: var(--font-weight-regular);
+    
+}
+
+.input:focus {
+    border-color: var(--color-brand-1);
+    color: var(--color-grey-1);
+    padding-left: 47px;
+}
+
+.input:valid {
+    padding-left: 47px;
+}
+
+.input-soma {
+    background: var(--color-grey-5);
+    border: var(--button-border) var(--color-grey-4);
+    border-radius: var(--radius-1);
+    padding: 16px 244px;
+    font-size: var(--font-text-2);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--font-line-height-1);
+    margin-bottom: var(--margin-bottom-input-values);
+}
+
+.input-none {
+    background: var(--color-grey-5);
+    border: 1.5px dashed var(--color-grey-3);
+    border-radius: var(--radius-1);
+    padding: 16px 244px;
+    font-size: var(--font-text-2);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--font-line-height-1);
+    margin-bottom: var(--margin-bottom-input-values);
+}
+
+.input-show {
+    padding: var(--padding-input-values);
+    margin-bottom: var(--margin-bottom-input-values);
+}
+
+.input-none-title {
+    color: var(--color-grey-1);
+}
+
+.input-none-text {
+    color: var(--color-grey-2);
+}
+
+.input-values {
+    background: var(--color-mode);
+    border: var(--button-border) var(--color-grey-5);
+    border-radius: var(--radius-1);
+    padding: var(--padding-input-values);
+    margin-bottom: var(--margin-bottom-input-values);
+}
+
+.input-values:hover {
+    border-color: var(--color-brand-1);
+}
+
+.input-buttons {
+    width: 128px;
+}

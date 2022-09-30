@@ -1,0 +1,19 @@
+.navbar {
+    background: var(--color-grey-5);
+    border: var(--button-border) var(--color-grey-4);
+    height: 110px;
+    margin-bottom: 56px;
+}
+
+.navbar > section {
+    /* height: 110px; */
+}
+
+.navbar p {
+    height: 110px;
+}
+
+.navSpan {
+    padding-right: 5px;
+    color: var(--color-brand-1);
+}
