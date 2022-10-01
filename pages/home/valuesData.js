@@ -1,5 +1,7 @@
 const valuesCategory = ["Entrada", "Saída"];
 
+let insertedInputValue = [{}]
+
 let insertedValues = [
   {
     id: 1,

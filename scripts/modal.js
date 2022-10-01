@@ -1,4 +1,5 @@
 let register = document.getElementById("buttonRegister")
+let main = document.querySelector("main")
 
 function openModal () {
     register.addEventListener("click", () => {
@@ -26,6 +27,17 @@ function checkInput () {
         event.target.value = event.target.value.slice(0, -1)
     }
     return insertedValue = event.target.value
+}
+
+function setSelected(buttonEntrada, buttonSaida){
+    if (event.target.id == "Entrada") {
+        buttonEntrada.classList = "btn btn-outline btn-outline-selected"
+        buttonSaida.classList = "btn btn-outline"
+    } else if (event.target.id == "Saida") {
+        buttonEntrada.classList = "btn btn-outline"
+        buttonSaida.classList = "btn btn-outline btn-outline-selected"
+    }
+    
 }
 
 function createModal () {
@@ -67,8 +79,7 @@ function createModal () {
     inputValue.name = "valueModal"
     inputValue.placeholder = "00,00"
     inputValue.addEventListener("keyup", () => {
-        checkInput()
-        
+        checkInput()  
     })
 
     let divType = document.createElement("div")
@@ -79,30 +90,21 @@ function createModal () {
     pType.classList = "title-1-medium"
 
     let buttonEntrada = document.createElement("button")
-    buttonEntrada.classList = "btn btn-outline btn-outline-selected"
-    buttonEntrada.id = "selected-entrada"
+    buttonEntrada.classList = "btn btn-outline"
+    buttonEntrada.id = "Entrada"
     buttonEntrada.innerText = "Entrada"
-    let selectedType = 0
     
     let buttonSaida = document.createElement("button")
     buttonSaida.classList = "btn btn-outline"
-    buttonEntrada.id = "selected-saida"
+    buttonSaida.id = "Saida"
     buttonSaida.innerText = "Saída"
     
     buttonSaida.addEventListener("click", () => {
-        if (buttonEntrada.classList == "btn btn-outline btn-outline-selected" && buttonSaida.classList == "btn btn-outline") {
-            buttonEntrada.classList.toggle("btn-outline-selected")
-            buttonSaida.classList.toggle("btn-outline-selected")
-            selectedType = 1
-        }
+        setSelected(buttonEntrada, buttonSaida)
     })
 
     buttonEntrada.addEventListener("click", () => {
-        if (buttonSaida.classList == "btn btn-outline btn-outline-selected" && buttonEntrada.classList == "btn btn-outline") {
-            buttonEntrada.classList.toggle("btn-outline-selected")
-            buttonSaida.classList.toggle("btn-outline-selected")
-            selectedType = 0
-        }
+        setSelected(buttonEntrada, buttonSaida)
     })
 
     let divButtons = document.createElement("div")
@@ -120,9 +122,18 @@ function createModal () {
     buttonInserir.addEventListener("click", () => {
         if (typeof insertedValue === "undefined" || insertedValue == undefined){
             alert("Insira um valor")
-        } else {
-            addValueCard(selectedType, insertedValues)
+        } if (buttonEntrada.classList == "btn btn-outline" && buttonSaida.classList == "btn btn-outline") {
+            alert("Selecione o tipo de valor")
+        }else {
+            let selectedType = document.querySelector(".btn-outline-selected")
+            let type = selectedType.id
+            insertedInputValue.push({id: `${insertedInputValue.length}`, value: `${inputValue.value}`, categoryID: `${type}`})
+            addValueCard(type, insertedInputValue[insertedInputValue.length-1])
             closeModal()
+            let sum = document.getElementById("entries-sum")
+            if (sum.innerText != 0){
+                removeNoValue()
+            }
         }
     })
 
@@ -134,5 +145,3 @@ function createModal () {
     section.append(modal)
     main.append(section)
 }
-
-// createModal()
