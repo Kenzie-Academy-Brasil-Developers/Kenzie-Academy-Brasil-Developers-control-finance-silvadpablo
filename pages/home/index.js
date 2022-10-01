@@ -42,8 +42,8 @@ function addValueCard (type, object) {
     button.classList = "btn icon"
     button.id = "value-card-remove"
     button.addEventListener("click", () => {
-        removeValueCard(object)
         totalSum.innerText -= value
+        removeValueCard(object)
     })
 
     divValue.append(pValue)
